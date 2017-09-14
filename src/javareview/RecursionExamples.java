@@ -14,10 +14,10 @@ public class RecursionExamples {
 // 1. Function must make a call to itself 
 // 2. Must have a base case    
 // 3. Each step "must" go closer to the base case(ie. problem is getting smaller)    
-    
+
     // Returns the nth Fibbonacci number 
     // n - the nth number we want in the sequence 
-    public int fibloop(int n) {
+    public static int fibloop(int n) {
         int[] numbers = new int[n + 1];
         numbers[0] = 1;
         //boundry condition fix
@@ -34,7 +34,7 @@ public class RecursionExamples {
 
     //calculate the nth Fib number using recursion
     //n - the nth number in the sequence
-    public int fibR(int n) {
+    public static int fibR(int n) {
         //Base Case 
         if (n == 0 || n == 1) {
             return 1;
@@ -42,10 +42,9 @@ public class RecursionExamples {
             return fibR(n - 1) + fibR(n - 2);
         }
 
-
     }
 
-    public int gcd(int a, int b) {
+    public static int gcd(int a, int b) {
         //swap if a is a lower number 
         if (a < b) {
             int temp = a;
@@ -73,42 +72,46 @@ public class RecursionExamples {
 
         // Ask the user to enter a number
         System.out.println("Enter a number");
+        int n = input.nextInt();
+
+        //for loop
+        //user inputed number 
+        int Fibonacci = fibloop(n);
+        System.out.println(n + "th: " + Fibonacci);
 
         RecursionExamples test = new RecursionExamples();
 
         //for loop 
-        int bound1 = test.fibloop(0);
-        bound1 = input.nextInt();
+        // int bound1 = test.fibloop(0);
+        // bound1 = input.nextInt();
         //System.out.println("0th " + bound1);
-
-        int bound2 = test.fibloop(1);
-        System.out.println("1th " + bound2);
-
-        int norm = test.fibloop(26);
-        System.out.println("26th " + norm);
-
-        System.out.println("------");
-
-        //Recursion
+//        int bound2 = test.fibloop(1);
+//        System.out.println("1th " + bound2);f
+//        int norm = test.fibloop(26);
+//        System.out.println("26th " + norm);
+//
+//        System.out.println("------");
+//
+//        //Recursion
         int boundR1 = test.fibR(0);
         System.out.println("0th " + boundR1);
-
         int boundR2 = test.fibR(1);
         System.out.println("1th " + boundR2);
-
         int norm1 = test.fibR(4);
         System.out.println("5th " + norm1);
 
         //GCD  TEST
-        System.out.println("--------");
-        System.out.println("GCD(1378,24)");
-        int gcd = test.gcd(1378, 24);
-        System.out.println(gcd);
+        //ask user to enter two numbers to find GCD of the numbers 
+        System.out.println("Enter 2 Numbers");
+        int a = input.nextInt();
+        int b = input.nextInt();
 
+        int GCD = gcd(a, b);
+        System.out.println("The GCD is: " + GCD);
 
-
-
-
-
+        //System.out.println("--------");
+        //        System.out.println("GCD(1378,24)");
+        //        int gcd = test.gcd(1378, 24);
+        //        System.out.println(gcd);
     }
 }
