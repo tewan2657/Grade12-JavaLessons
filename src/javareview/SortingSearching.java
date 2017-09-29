@@ -20,7 +20,7 @@ public class SortingSearching {
 //selectionSort
 
     public void selectionSort(int[] array) {
-        //Keep track  of which position we are sorting
+        //Keep track of which position we are sorting
         for (int position = 0; position < array.length; position++) {
             //go through the rest looking for a smaller number
             for (int i = position + 1; i < array.length; i++) {
