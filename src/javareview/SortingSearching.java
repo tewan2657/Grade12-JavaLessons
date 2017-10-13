@@ -134,7 +134,7 @@ public class SortingSearching {
         return -1;
 
     }
-    //binary seach
+    //binary search
     public int binarySearch(int[] array, int target) {
         int min = 0;
         int max = array.length - 1;
@@ -181,6 +181,6 @@ public class SortingSearching {
         for (int i = 0; i < num.length; i++) {
             System.out.println(num[i]);
         }
-        System.out.println("The number is in the " + test.binarySearch(num, 100)+ " spot");
+        System.out.println("The number is in the " + test.binarySearch(num, 40)+ " spot");
     }
 }
