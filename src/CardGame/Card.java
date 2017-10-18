@@ -4,18 +4,22 @@
  */
 package CardGame;
 
+import static CardGame.Card.CLUBS;
+import static CardGame.Card.DIAMONDS;
+import static CardGame.Card.HEARTS;
+import static CardGame.Card.SPADES;
+
 /**
- * A class to represent
  *
  * @author tewan2657
  */
 public class Card {
-    //Suit constants
-   public static final int CLUBS = 0;
+      //Suit constants
+
+    public static final int CLUBS = 0;
     public static final int DIAMONDS = 1;
     public static final int SPADES = 2;
     public static final int HEARTS = 3;
-    
 //Instance variables
     private int rank;
     private int suit;
@@ -23,6 +27,7 @@ public class Card {
     //Constructor
     /**
      * This is the constructor for a single playing card
+     *
      * @param rank the rank of the card (1-13)
      * @param suit the suit of the card
      */
@@ -34,6 +39,7 @@ public class Card {
 
     /**
      * Get the suit of the card
+     *
      * @return the suit of the card
      */
     public int getSuit() {
@@ -42,15 +48,17 @@ public class Card {
 
     /**
      * gets the rank of the card
+     *
      * @return the rank of the card
      */
     public int getRank() {
         return rank;
     }
-    
+
     /**
      * Determines if this card is bigger than another card
-     * @param c the card used to check against 
+     *
+     * @param c the card used to check against
      * @return true if the card is bigger than card c.
      */
     public boolean isBigger(Card c) {
@@ -62,10 +70,38 @@ public class Card {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public String toString() {
+        String output = "";
+        if (this.rank == 1) {
+            output += "Ace";
+        } else if (this.rank <= 10) {
+            output += this.rank;
+
+        } else if (this.rank == 11) {
+            output += "Jack";
+
+        } else if (this.rank == 12) {
+            output += "Queen";
+
+
+        } else if (this.rank == 13) {
+            output += "King";
+        }
+        output += " of ";
+
+        if (this.suit == CLUBS) {
+            output += "\u2663";
+            
+        } else if (this.suit == DIAMONDS) {
+            output += "\u2662";
+            
+        } else if (this.suit == SPADES) {
+            output += "\u2660";
+
+        } else if (this.suit == HEARTS) {
+            output += "\u2661";
+        }
+        return output;
     }
+
 }
