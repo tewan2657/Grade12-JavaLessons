@@ -62,6 +62,7 @@ public class Card {
      * @return true if the card is bigger than card c.
      */
     public boolean isBigger(Card c) {
+        //Card c is another variable to compare with the single playing card.
         //is this card bigger than the one passed in 
         if (this.rank > c.rank) {
             return true;

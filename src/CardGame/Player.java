@@ -12,6 +12,8 @@ import java.util.ArrayList;
  */
 public class Player {
 
+    //Arraylist is an array that can remove or add numbers
+    //it will also resize itself.  
     private ArrayList<Card> hand;
     private String name;
     private int numCards;
