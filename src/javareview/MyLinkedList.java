@@ -10,6 +10,7 @@ package javareview;
  */
 public class MyLinkedList {
 
+    //starting -"head"
     private IntNode head;
     private int numItems;
 
@@ -81,7 +82,7 @@ public class MyLinkedList {
 
     public int get(int position) {
         IntNode node = head;
-        // mov ethe number of times 
+        // move the number of times 
         for (int i = 0; i < position; i++) {
             node = node.getNext();
 
